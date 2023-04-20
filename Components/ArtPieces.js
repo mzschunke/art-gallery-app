@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function ArtPieces({data}) {
+export default function ArtPieces({pieces}) {
     return (
         <ul>
-            {data.map((data) => (
+            {pieces.map((data) => (
                 
                 <li key={data.slug}>{data.name} - {data.artist}
                 <Image key={data.slug} src={data.imageSource} alt={data.name} width={20} height={20}></Image>
@@ -12,6 +12,8 @@ export default function ArtPieces({data}) {
        </ul>
     );
 }
+
+
 
 
 
