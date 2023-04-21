@@ -2,7 +2,9 @@
 const nextConfig = {
   compiler: {
     styledComponents: true,
+
   },
+
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
@@ -15,4 +17,31 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'example-apis.vercel.app',
+        port: '',
+        pathname: '/assets/art/**',
+      },
+    ],
+  },
+}
+
+
+/*
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'example-apis.vercel.app',
+        port: '',
+        pathname: '/assets/art/**',
+      },
+    ],
+  },
+  */
+
+
