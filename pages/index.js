@@ -8,7 +8,7 @@ export default function SpotlightPage({data, pieces} ) {
 
   return (
     <div> 
-      <Navigation />
+  
       <h1>Art Gallery</h1>
       
       <Spotlight data={data}/>
@@ -19,8 +19,6 @@ export default function SpotlightPage({data, pieces} ) {
 
 
 // <ArtPieces pieces={data}/>
-
-
 
 
 
