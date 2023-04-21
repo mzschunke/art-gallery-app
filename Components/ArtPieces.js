@@ -4,9 +4,9 @@ export default function ArtPieces({pieces}) {
     return (
         <ul>
             {pieces.map((data) => (
-                
-                <li key={data.slug}>{data.name} - {data.artist}
+                <li key={data.slug}>
                 <Image key={data.slug} src={data.imageSource} alt={data.name} width={20} height={20}></Image>
+                {" "}{data.name} | {data.artist}
                  </li>
             ))}
        </ul>
