@@ -21,11 +21,12 @@ export default function artPieceDetail({data}) {
         <Head>
           <title>Detail Page</title>
         </Head>
+        <Link href="/ArtPieces">← Back to Gallery</Link>
         <h1>
           {artist} - {name}
         </h1>
         <Image src={imageSource} alt={name} width={dimensions.width/5} height={dimensions.height/5}></Image>
-        <Link href="/ArtPieces">← Back to Gallery</Link>
+        
       </>
     );
 }

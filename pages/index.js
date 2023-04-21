@@ -9,7 +9,7 @@ export default function SpotlightPage({data, pieces} ) {
   return (
     <div> 
   
-      <h1>Art Gallery</h1>
+  
       
       <Spotlight data={data}/>
    
