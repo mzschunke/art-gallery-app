@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Favorite } from "../pages/_app";
+import { useState } from "react";
+import FavoriteButton from "../Components/FavoriteButton";
 
 export default function ArtPieces({pieces}) {
     return (
@@ -8,8 +11,9 @@ export default function ArtPieces({pieces}) {
                 <li key={data.slug}>
                  <Link href={`ArtPieces/${data.slug}`}>   
                 <Image key={data.slug} src={data.imageSource} alt={data.name} width={20} height={20}></Image>
-                {" "}{data.name} | {data.artist}
-                </Link>
+                {" "}{data.name} | {data.artist}{" "}
+                </Link>    
+                 <FavoriteButton />
                  </li>
             ))}
        </ul>
