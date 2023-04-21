@@ -12,7 +12,7 @@ export default function Spotlight({ data }) {
 return (
     <div>
         <h1>Random Piece for Inspiration:</h1>
-        <Image src={randomArtpiece.imageSource} alt={randomArtpiece.name} width={400} height={400}></Image>
+        <Image src={randomArtpiece.imageSource} alt={randomArtpiece.name} width={randomArtpiece.dimensions.width/5} height={randomArtpiece.dimensions.height/5}></Image>
     </div>
     );
 }

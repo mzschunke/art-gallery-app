@@ -1,12 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArtPieces({pieces}) {
     return (
         <ul>
             {pieces.map((data) => (
                 <li key={data.slug}>
+                 <Link href={`ArtPieces/${data.slug}`}>   
                 <Image key={data.slug} src={data.imageSource} alt={data.name} width={20} height={20}></Image>
                 {" "}{data.name} | {data.artist}
+                </Link>
                  </li>
             ))}
        </ul>
